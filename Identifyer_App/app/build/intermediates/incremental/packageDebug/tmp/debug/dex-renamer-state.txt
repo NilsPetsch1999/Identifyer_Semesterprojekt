@@ -1,4 +1,4 @@
-#Fri Dec 23 01:43:57 CET 2022
+#Mon Dec 26 21:20:51 CET 2022
 base.2=C\:\\Users\\Nils_\\Documents\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.2=9/classes.dex
 base.1=C\:\\Users\\Nils_\\Documents\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

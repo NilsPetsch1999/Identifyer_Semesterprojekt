@@ -9,7 +9,7 @@ color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-id button_Scan
+id scanner_view
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
