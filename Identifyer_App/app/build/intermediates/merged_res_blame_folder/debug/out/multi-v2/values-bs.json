@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Nils_\\Documents\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
+            "outputFile": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bs\\values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Nils_\\.gradle\\caches\\transforms-3\\8aa9a48ab309a6058d7da29b6c5a2179\\transformed\\core-1.7.0\\res\\values-bs\\values-bs.xml",
