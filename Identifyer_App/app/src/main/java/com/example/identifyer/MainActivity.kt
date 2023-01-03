@@ -33,9 +33,6 @@ class MainActivity : AppCompatActivity() {
             startScanning()
         }
 
-
-
-
     }
 
     //Scanning function
@@ -95,6 +92,8 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
 
     }
+
+
     // Menu create function
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main, menu)
