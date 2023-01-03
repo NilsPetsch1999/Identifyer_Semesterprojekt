@@ -25,6 +25,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Identifyer" >
         <activity
+            android:name="com.example.identifyer.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.identifyer.MainActivity"
             android:exported="true" >
             <intent-filter>

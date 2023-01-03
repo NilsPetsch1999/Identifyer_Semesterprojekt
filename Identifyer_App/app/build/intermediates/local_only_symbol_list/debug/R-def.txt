@@ -9,9 +9,15 @@ color teal_700
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id action_loadDatabase
+id action_settings
+id general_settings
 id scanner_view
 layout activity_main
+layout activity_settings
+menu main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 style Theme.Identifyer
+xml pref_settings

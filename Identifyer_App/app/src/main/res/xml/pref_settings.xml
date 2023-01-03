@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <EditTextPreference
+        android:key="settings_first"
+        android:title="first"
+        app:useSimpleSummaryProvider="true"
+        app:key="setting_first"
+        app:title="first" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="settings_second"
+        android:summaryOff="off"
+        android:summaryOn="on"
+        android:title="second"
+        />
+
+</androidx.preference.PreferenceScreen>

@@ -12,8 +12,20 @@
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\xml_pref_settings.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\xml\\pref_settings.xml"
+    },
+    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\menu_main.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",

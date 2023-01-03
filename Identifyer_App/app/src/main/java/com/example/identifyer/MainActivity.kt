@@ -1,9 +1,12 @@
 package com.example.identifyer
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -34,14 +37,15 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    //Scanning function
     private fun startScanning(){
         val scannerView: CodeScannerView = findViewById(R.id.scanner_view)
         codeScanner = CodeScanner(this, scannerView)
         codeScanner.camera  = CodeScanner.CAMERA_BACK
         codeScanner.formats = CodeScanner.ALL_FORMATS
-
         codeScanner.autoFocusMode = AutoFocusMode.SAFE
-        codeScanner.scanMode = ScanMode. SINGLE
+        codeScanner.scanMode = ScanMode.SINGLE
         codeScanner.isAutoFocusEnabled= true
         codeScanner.isFlashEnabled= false
 
@@ -49,7 +53,6 @@ class MainActivity : AppCompatActivity() {
             runOnUiThread {
                 Toast.makeText(this, "Scan Result : ${it.text}", Toast.LENGTH_SHORT).show()
             }
-
         }
 
         codeScanner.errorCallback = ErrorCallback {
@@ -61,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             codeScanner.startPreview()
         }
     }
-
+    //QR Code Scanner Permission for Camera
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -77,19 +80,38 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+    //onResume lifecycle
     override fun onResume() {
         super.onResume()
         if(::codeScanner.isInitialized){
             codeScanner?.startPreview()
         }
     }
-
+    //onPause lifecycle
     override fun onPause() {
         if(::codeScanner.isInitialized){
             codeScanner?.releaseResources()
         }
         super.onPause()
 
+    }
+    // Menu create function
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+    //Menu when item is clicked
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val itemId: Int = item.itemId
+        if(itemId == R.id.action_settings){
+            //What to do when clicking on settings
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+            return true
+        }else if(itemId == R.id.action_loadDatabase){
+            //What to do when  clicking load Database
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
