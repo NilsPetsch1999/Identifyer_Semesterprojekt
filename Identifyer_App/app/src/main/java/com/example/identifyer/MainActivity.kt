@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.budiyev.android.codescanner.*
+import com.example.identifyer.ViewModel.RoomViewModel
 import com.example.identifyer.model.Room
 import com.example.identifyer.ViewModel.UserViewModel
 import com.example.identifyer.model.User
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var codeScanner: CodeScanner
 
     //ViewModel User
-    lateinit var userViewModel :UserViewModel
+    lateinit var roomViewModel : RoomViewModel
     //ViewModel Rooms
 
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        roomViewModel = ViewModelProvider(this).get(RoomViewModel::class.java)
 
 
 
@@ -60,9 +61,10 @@ class MainActivity : AppCompatActivity() {
 
         codeScanner.decodeCallback = DecodeCallback{
 
-            Log.d("scan Qr Result", userViewModel.findUserById(it.text.toLong()).toString())
+            Log.d("scan Qr Result", roomViewModel.findRoomById(it.text.toLong()).toString())
+            var scannedRoom = roomViewModel.findRoomById(it.text.toLong())
             runOnUiThread {
-                Toast.makeText(this, "Scan Result : ${it.text}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Roomnumber :${scannedRoom.roomName} InmateList: ${scannedRoom.inmateList}", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -125,10 +127,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }else if(itemId == R.id.action_loadDatabase){
-
+            var newRoom = Room("1.11", listOf<String>("1", "2", "3"), 1)
             var newUser = User("User3333333333333","password3")
             //userViewModel.insert(newUser)
-
+                roomViewModel.insert(newRoom)
             //var randomString  = userViewModel.findUserById(1)
 
 
@@ -136,10 +138,10 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 withContext(Dispatchers.IO){
 
-                    var randomString  = userViewModel.findUserById(1)
+                   var randomString  =roomViewModel.findRoomById(1)
 
-                    Log.d("Usercheck", randomString.username.toString())
-                    Log.d("Entries", userViewModel.getAllUsers().toString())
+                    //Log.d("Roomcheck", randomString.id.toString())
+                    Log.d("Entries", roomViewModel.getAllRooms().toString())
 
                 }
 
