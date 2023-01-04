@@ -1,4 +1,4 @@
-package com.example.identifyer
+package com.example.identifyer.model
 
 import androidx.annotation.NonNull
 import androidx.room.*
