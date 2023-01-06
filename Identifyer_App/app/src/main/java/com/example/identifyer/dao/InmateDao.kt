@@ -25,5 +25,8 @@ interface InmateDao {
     fun getAllInmates() :List<Inmate>
 
     @Query("SELECT * FROM inmate WHERE inmate.id = :id")
-    fun findInmateById(id :Long): List<Inmate>
+    fun findInmateById(id :Long): Inmate
+
+    @Query("SELECT * FROM inmate WHERE inmate.room_id = :roomId")
+    fun findInmatesByRoomId(roomId :Long): List<Inmate>
 }

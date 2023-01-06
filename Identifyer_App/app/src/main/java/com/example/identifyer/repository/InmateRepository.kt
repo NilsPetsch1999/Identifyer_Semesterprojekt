@@ -21,11 +21,15 @@ class InmateRepository(private val inmateDao: InmateDao) {
         inmateDao.update(inmate)
     }
 
-    suspend fun getAllInmate(): List<Inmate>{
+     fun getAllInmates(): List<Inmate>{
         return inmateDao.getAllInmates()
     }
 
-    suspend fun getInmateById (inmate: Inmate){
-        inmateDao.findInmateById(id = inmate.id ?: 1)
+    fun getInmateById (id: Long):Inmate{
+        return inmateDao.findInmateById(id)
+    }
+
+    fun getInmatesByRoomId(id :Long):List<Inmate>{
+        return inmateDao.findInmatesByRoomId(id)
     }
 }

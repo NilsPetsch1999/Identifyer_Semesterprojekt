@@ -14,9 +14,11 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.budiyev.android.codescanner.*
+import com.example.identifyer.ViewModel.InmateViewModel
 import com.example.identifyer.ViewModel.RoomViewModel
 import com.example.identifyer.model.Room
 import com.example.identifyer.ViewModel.UserViewModel
+import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,16 +29,17 @@ class MainActivity : AppCompatActivity() {
     //Code scanner QR
     private lateinit var codeScanner: CodeScanner
 
-    //ViewModel User
-    lateinit var roomViewModel : RoomViewModel
-    //ViewModel Rooms
 
+    lateinit var inmateViewModel : InmateViewModel
+    //ViewModel Rooms
+    lateinit var roomViewModel : RoomViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         roomViewModel = ViewModelProvider(this).get(RoomViewModel::class.java)
+        inmateViewModel = ViewModelProvider(this).get(InmateViewModel::class.java)
 
 
 
@@ -66,6 +69,10 @@ class MainActivity : AppCompatActivity() {
             runOnUiThread {
                 Toast.makeText(this, "Roomnumber :${scannedRoom.roomName} InmateList: ${scannedRoom.inmateList}", Toast.LENGTH_SHORT).show()
             }
+            //intent to inmate list
+            val intent = Intent(this, InmateListActivity::class.java)
+            startActivity(intent)
+
         }
 
         codeScanner.errorCallback = ErrorCallback {
@@ -129,9 +136,12 @@ class MainActivity : AppCompatActivity() {
         }else if(itemId == R.id.action_loadDatabase){
             var newRoom = Room("1.11", listOf<String>("1", "2", "3"), 1)
             var newUser = User("User3333333333333","password3")
+            var newInmate = Inmate("Firstname3","Lastname3", "male3", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 2 )
             //userViewModel.insert(newUser)
-                roomViewModel.insert(newRoom)
+                //roomViewModel.insert(newRoom)
             //var randomString  = userViewModel.findUserById(1)
+            inmateViewModel.insert(newInmate)
 
 
 
@@ -141,8 +151,9 @@ class MainActivity : AppCompatActivity() {
                    var randomString  =roomViewModel.findRoomById(1)
 
                     //Log.d("Roomcheck", randomString.id.toString())
-                    Log.d("Entries", roomViewModel.getAllRooms().toString())
-
+                    Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(1).toString())
+                    Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(2).toString())
+                    Log.d("Entries", inmateViewModel.getAllInmates().toString())
                 }
 
             }

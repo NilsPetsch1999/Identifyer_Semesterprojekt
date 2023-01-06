@@ -2861,6 +2861,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll_inmate_item
 id masked
 id match_constraint
 id match_parent
@@ -2969,6 +2970,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rv_inmate_list
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3074,6 +3076,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topEnd
 id topPanel
@@ -3087,6 +3090,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_inmate_firstname
+id tv_inmate_lastname
+id tv_room_name
+id tv_title_inmate_list
 id unchecked
 id uniform
 id unlabeled
@@ -3201,6 +3208,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_inmatelist
 layout activity_main
 layout activity_settings
 layout custom_dialog
@@ -3221,6 +3229,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout expand_button
 layout image_frame
+layout inmate_list_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

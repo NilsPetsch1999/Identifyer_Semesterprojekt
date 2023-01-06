@@ -54,6 +54,10 @@ dependencies {
     implementation "androidx.room:room-ktx:2.4.2"
     kapt "androidx.room:room-compiler:2.4.2"
 
+    //RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation"androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
 
 

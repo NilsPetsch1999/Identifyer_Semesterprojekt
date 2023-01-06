@@ -28,6 +28,9 @@
             android:name="com.example.identifyer.SettingsActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.identifyer.InmateListActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.identifyer.MainActivity"
             android:exported="true" >
             <intent-filter>
