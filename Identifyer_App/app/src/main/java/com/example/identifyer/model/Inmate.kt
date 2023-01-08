@@ -2,6 +2,7 @@ package com.example.identifyer.model
 
 import androidx.annotation.NonNull
 import androidx.room.*
+import java.io.Serializable
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -22,7 +23,7 @@ data class Inmate(
     @ColumnInfo @NonNull var combatExperience : String? ,
     @ColumnInfo @NonNull var additionalNotes : List<String>? ,
     @ColumnInfo @NonNull var room_id : Long? , //Foreign Key to add
-) {
+) :Serializable {
 
     @Ignore
     constructor(firstname: String?, lastname: String?,gender:String?, dateOfBirth:Long?, arrivalDate : Long?, timeOfSentence : Long? , securityLevel : Int?, physicalWellness : String?, mentalWellness : String?, offenseList : List<String>?, offenseAccomplices : List<String>?, combatExperience : String?, additionalNotes : List<String>?, room_id : Long? ):this(null, firstname, lastname, gender, dateOfBirth, arrivalDate, timeOfSentence, securityLevel, physicalWellness, mentalWellness, offenseList, offenseAccomplices, combatExperience, additionalNotes, room_id)

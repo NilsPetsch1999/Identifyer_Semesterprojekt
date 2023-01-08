@@ -12,6 +12,7 @@ interface InmateDao {
     @get:Query("SELECT * FROM inmate")
     val inmates : LiveData<List<Inmate>>
 
+
     @Insert
     suspend fun insert(inmate: Inmate)
 

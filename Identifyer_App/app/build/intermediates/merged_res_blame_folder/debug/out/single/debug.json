@@ -60,6 +60,10 @@
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_scanned_room.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_scanned_room.xml"
+    },
+    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },

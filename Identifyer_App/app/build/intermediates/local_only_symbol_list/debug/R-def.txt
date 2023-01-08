@@ -17,7 +17,6 @@ id rv_inmate_list
 id scanner_view
 id toolbar
 id tv_inmate_firstname
-id tv_inmate_lastname
 id tv_room_name
 id tv_title_inmate_list
 layout activity_inmatelist

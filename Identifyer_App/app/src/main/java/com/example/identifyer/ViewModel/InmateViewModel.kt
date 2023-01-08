@@ -3,10 +3,7 @@ package com.example.identifyer.ViewModel
 import android.app.Application
 import android.database.sqlite.SQLiteConstraintException
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.identifyer.database.ApplicationDatabase
 import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.User
@@ -23,20 +20,30 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
 
     val mInmateEntries : LiveData<List<Inmate>>
 
-    val mFirstname by lazy { MutableLiveData("") }
-    val mLastname by lazy { MutableLiveData("") }
+
+
+   
     val errorMsg by lazy { MutableLiveData<String?>(null) }
 
     init{
         val inmateDao = ApplicationDatabase.getDatabase(application).inmateDao()
         inmateRepository = InmateRepository(inmateDao)
         mInmateEntries = inmateRepository.inmateEntries
+
         }
 
     //find user by id
     fun findInmateById(id: Long) : Inmate {
 
         return inmateRepository.getInmateById(id)
+    }
+    //return a filtered List of nInmateEntries (observer)
+    fun getFilteredList(s: String): LiveData<List<Inmate>> {
+        return Transformations.map(mInmateEntries) { items ->
+            items.filter {
+                it.room_id.toString().contains(s)
+            }
+        }
     }
 
     fun getAllInmates(): List<Inmate>{

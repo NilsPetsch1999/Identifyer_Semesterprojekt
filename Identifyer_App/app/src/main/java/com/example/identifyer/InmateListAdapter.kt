@@ -24,7 +24,7 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
     inner class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
         private val mItemFirstnameTextView = itemView.findViewById<TextView>(R.id.tv_inmate_firstname)
-        private val mItemLastnameTextView = itemView.findViewById<TextView>(R.id.tv_inmate_lastname)
+
         init {
             itemView.setOnClickListener {
                 itemClickListener?.invoke(items[absoluteAdapterPosition])
@@ -33,8 +33,8 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
         }
 
         fun bind (index: Int){
-            mItemFirstnameTextView.text= items[index].firstname
-            mItemLastnameTextView.text = items[index].lastname
+            mItemFirstnameTextView.text= items[index].firstname + " " + items[index].lastname
+
         }
 
 

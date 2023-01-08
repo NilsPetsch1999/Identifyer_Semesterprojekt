@@ -3090,7 +3090,6 @@ int id transition_scene_layoutid_cache 0x7f0801df
 int id transition_transform 0x7f0801e0
 int id triangle 0x7f0801e1
 int id tv_inmate_firstname 0x7f0801fb
-int id tv_inmate_lastname 0x7f0801fc
 int id tv_room_name 0x7f0801fd
 int id tv_title_inmate_list 0x7f0801e2
 int id unchecked 0x7f0801e3

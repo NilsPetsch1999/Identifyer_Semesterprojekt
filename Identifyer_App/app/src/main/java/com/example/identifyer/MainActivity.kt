@@ -22,17 +22,69 @@ import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
+    //Testdaten
+
+    /*
+
+                Inmates
+
+                inmateViewModel.insert(Inmate("John","Doe", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 1 ))
+                inmateViewModel.insert(Inmate("Maurice","Jefferson", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 3 ))
+                inmateViewModel.insert(Inmate("Patrick","Mahomes", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 6 ))
+                inmateViewModel.insert(Inmate("Nils","Petsch", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 3 ))
+                inmateViewModel.insert(Inmate("Flo","Huber", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 2 ))
+                inmateViewModel.insert(Inmate("Christian","McCaffrey", "male", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 4 ))
+                inmateViewModel.insert(Inmate("Felix","Engelmeier", "male3", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 6 ))
+                inmateViewModel.insert(Inmate("Lara","Roth", "male3", 3, 3, 3, 3,"Test3","Test3",
+                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 5 ))
+
+                Rooms
+                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2))
+                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4))
+                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3))
+                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2))
+                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1))
+                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5))
+
+                User
+                userViewModel.insert(User("User1", "Password1"))
+                userViewModel.insert(User("User2", "Password2"))
+                userViewModel.insert(User("User3", "Password3"))
+                userViewModel.insert(User("User4", "Password4"))
+                userViewModel.insert(User("User5", "Password5"))
+
+
+
+
+     */
+
+
+
+
+
     //Code scanner QR
     private lateinit var codeScanner: CodeScanner
 
-
+    //inmate
     lateinit var inmateViewModel : InmateViewModel
     //ViewModel Rooms
     lateinit var roomViewModel : RoomViewModel
+    //View Model user
+    lateinit var userViewModel:UserViewModel
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
         roomViewModel = ViewModelProvider(this).get(RoomViewModel::class.java)
         inmateViewModel = ViewModelProvider(this).get(InmateViewModel::class.java)
-
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
 
         if( ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED){
@@ -64,15 +116,16 @@ class MainActivity : AppCompatActivity() {
 
         codeScanner.decodeCallback = DecodeCallback{
 
-            Log.d("scan Qr Result", roomViewModel.findRoomById(it.text.toLong()).toString())
-            var scannedRoom = roomViewModel.findRoomById(it.text.toLong())
+
+            //var inmateList = inmateViewModel.findInmateById(it.text.toLong())
             runOnUiThread {
-                Toast.makeText(this, "Roomnumber :${scannedRoom.roomName} InmateList: ${scannedRoom.inmateList}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Roomnumber :${it.text.toString()} ", Toast.LENGTH_SHORT).show()
             }
             //intent to inmate list
             val intent = Intent(this, InmateListActivity::class.java)
+            intent.putExtra(InmateListActivity.ROOM_KEY, it.text.toString())
             startActivity(intent)
-
+            Log.d("Intent", " ")
         }
 
         codeScanner.errorCallback = ErrorCallback {
@@ -138,10 +191,6 @@ class MainActivity : AppCompatActivity() {
             var newUser = User("User3333333333333","password3")
             var newInmate = Inmate("Firstname3","Lastname3", "male3", 3, 3, 3, 3,"Test3","Test3",
                 listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 2 )
-            //userViewModel.insert(newUser)
-                //roomViewModel.insert(newRoom)
-            //var randomString  = userViewModel.findUserById(1)
-            inmateViewModel.insert(newInmate)
 
 
 

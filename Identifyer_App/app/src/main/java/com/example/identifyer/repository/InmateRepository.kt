@@ -26,10 +26,12 @@ class InmateRepository(private val inmateDao: InmateDao) {
     }
 
     fun getInmateById (id: Long):Inmate{
+
         return inmateDao.findInmateById(id)
     }
 
     fun getInmatesByRoomId(id :Long):List<Inmate>{
+
         return inmateDao.findInmatesByRoomId(id)
     }
 }

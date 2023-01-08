@@ -3,11 +3,9 @@ package com.example.identifyer.ViewModel
 import android.app.Application
 import android.database.sqlite.SQLiteConstraintException
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.identifyer.database.ApplicationDatabase
+import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 import com.example.identifyer.repository.RoomRepository
 import kotlinx.coroutines.Dispatchers
@@ -33,6 +31,14 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
         mRoomEntries = roomDao.rooms
 
     }
+    fun getRoomData(s: String): LiveData<List<Room>> {
+        return Transformations.map(mRoomEntries) { items ->
+            items.filter {
+                it.id.toString().contains(s)
+            }
+        }
+    }
+
     fun findRoomById (id : Long):Room{
         return roomRepository.getRoomById(id)
     }
