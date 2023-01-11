@@ -2,6 +2,7 @@ package com.example.identifyer.repository
 
 import androidx.lifecycle.LiveData
 import com.example.identifyer.dao.RoomDao
+import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 
 class RoomRepository(private val roomDao: RoomDao) {
@@ -22,8 +23,21 @@ class RoomRepository(private val roomDao: RoomDao) {
         return roomDao.getAllRooms()
     }
 
-    fun getRoomById (id: Long) :Room{
+     fun getRoomById (id: Long) :Room{
         return roomDao.findRoomById(id)
+    }
+
+    fun getRoomsByRoomId(id :Long):List<Room>{
+
+        return roomDao.findRoomsByRoomId(id)
+    }
+
+    fun getRoomByName(name :String):Room {
+
+        return roomDao.findRoomByName(name)
+    }
+    fun deleteAll(){
+        return roomDao.deleteAll()
     }
 
 

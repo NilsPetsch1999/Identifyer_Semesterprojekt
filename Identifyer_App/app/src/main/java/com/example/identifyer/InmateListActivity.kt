@@ -19,7 +19,7 @@ import kotlinx.coroutines.withContext
 
 class InmateListActivity : AppCompatActivity() {
     companion object {
-        const val ROOM_KEY = "ROOM_KEY"
+        const val LIST_KEY = "LIST_KEY"
     }
     lateinit var inmateViewModel: InmateViewModel
 
@@ -41,13 +41,13 @@ class InmateListActivity : AppCompatActivity() {
 
 
 
-
+        Log.d("DFASDFASDF",intent.getStringExtra(LIST_KEY)!! )
 
 
 
       //  val scannedRoom = ((intent.getSerializableExtra(ROOM_KEY)as Room).id).toString()
 
-        inmateViewModel.getFilteredList(intent.getStringExtra(ROOM_KEY)!!).observe(this){ entries->
+        inmateViewModel.getFilteredList(intent.getStringExtra(LIST_KEY)!!).observe(this){ entries->
             adapter.items = entries
         }
 

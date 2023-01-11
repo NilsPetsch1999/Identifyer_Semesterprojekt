@@ -4,16 +4,124 @@
     android:id="@+id/ll_inmate_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
-        android:id="@+id/tv_inmate_firstname"
+        android:id="@+id/tv_inmate_full_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:paddingTop= "4dp"
         android:paddingBottom="1dp"
         />
+
+    <TextView
+        android:id="@+id/tv_inmate_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_inmate_date_of_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_inmate_arrival_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_time_of_sentence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_inmate_security_lvl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_physical_wellness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_inmate_mental_wellness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_offense_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_offense_Accomplices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_combat_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_additional_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_inmate_room_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:paddingTop= "4dp"
+        android:paddingBottom="1dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#c0c0c0"
+        android:paddingTop="10dp"/>
 
 
 

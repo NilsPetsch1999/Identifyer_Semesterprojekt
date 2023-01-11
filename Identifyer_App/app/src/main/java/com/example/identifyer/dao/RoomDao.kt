@@ -2,6 +2,7 @@ package com.example.identifyer.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 
 
@@ -25,4 +26,13 @@ interface RoomDao {
 
     @Query("SELECT * FROM room WHERE room.id = :id")
     fun findRoomById(id :Long): Room
+
+    @Query("SELECT * FROM room WHERE room.id = :roomId")
+    fun findRoomsByRoomId(roomId :Long): List<Room>
+
+    @Query("SELECT * FROM room WHERE room.roomNumber = :roomName")
+    fun findRoomByName(roomName :String): Room
+
+    @Query("DELETE FROM room")
+    fun deleteAll()
 }

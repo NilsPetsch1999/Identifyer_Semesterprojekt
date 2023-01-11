@@ -18,7 +18,9 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
 
     private val roomRepository :RoomRepository
 
+
     val mRoomEntries: LiveData<List<Room>>
+    var scannedRoom = Room()
 
     val mSecurityLevel by lazy { MutableLiveData(0) }
     val mInmateList by lazy {MutableLiveData<String?>(null)}
@@ -35,22 +37,32 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
         return Transformations.map(mRoomEntries) { items ->
             items.filter {
                 it.id.toString().contains(s)
+
             }
+
         }
     }
 
     fun findRoomById (id : Long):Room{
         return roomRepository.getRoomById(id)
     }
+
+    fun getAllRoomsByRoomId(id : Long): List<Room>{
+        return roomRepository.getRoomsByRoomId(id)
+    }
     fun getAllRooms():List<Room>{
         return roomRepository.getAllRooms()
+    }
+
+    fun findRoomByName(roomName : String): Room{
+        return roomRepository.getRoomByName(roomName)
     }
 
     fun insert(newRoom :Room)= viewModelScope.launch{
         errorMsg.value= null
 
-        if(newRoom.roomName.isNullOrEmpty()){
-            newRoom.roomName ="no Room Name"
+        if(newRoom.roomNumber.isNullOrEmpty()){
+            newRoom.roomNumber ="no Room Name"
         }
 
         if(newRoom.inmateList.isNullOrEmpty()){
@@ -60,7 +72,7 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
             newRoom.securityLevel = 99
         }
 
-        val roomName = newRoom.roomName
+        val roomName = newRoom.roomNumber
         val inmateList = newRoom.inmateList
         val securityLevel = newRoom.securityLevel
 
@@ -71,11 +83,12 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
                 withContext(Dispatchers.IO){
                     try {
                         roomRepository.insert(newRoom)
-
+                        Log.d("Success", "Insert Success" + newRoom.roomNumber)
                     }catch (ex : ExecutionException){
                         Log.d("Error", "an error was thrown")
                     }
                 }
+
             }catch (ex : SQLiteConstraintException){
                 errorMsg.value = "This entry already exists!"
 

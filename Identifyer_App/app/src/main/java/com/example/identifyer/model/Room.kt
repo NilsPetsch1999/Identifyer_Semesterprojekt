@@ -5,14 +5,16 @@ import androidx.room.*
 import java.io.Serializable
 
 
-@Entity(tableName = "room", indices = [Index(value = ["securityLevel"], unique = true)])
+@Entity(tableName = "room", indices = [Index(value = ["id"], unique = true)])
 data class Room(
     @PrimaryKey(autoGenerate = true) @ColumnInfo var  id : Long? =null,
-    @ColumnInfo @NonNull var roomName: String?,
+    @ColumnInfo @NonNull var roomNumber: String?,
     @ColumnInfo @NonNull var inmateList: List<String>?,
-    @ColumnInfo @NonNull var securityLevel: Int?
+    @ColumnInfo @NonNull var securityLevel: Int?,
+    @ColumnInfo @NonNull var tract: Int?,
+    @ColumnInfo @NonNull var maxCapacity: Int?
 ): Serializable {
     @Ignore
-    constructor(roomName:String?, inmateList: List<String>?, securityLevel: Int) :this (null, roomName, inmateList, securityLevel)
-    constructor() : this("",emptyList(), 0)
+    constructor(roomName:String?, inmateList: List<String>?, securityLevel: Int, tract: Int?, maxCapacity: Int?) :this (null, roomName, inmateList, securityLevel, tract, maxCapacity)
+    constructor() : this("",emptyList(), 0, 0, 0)
 }

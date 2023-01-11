@@ -20,10 +20,7 @@ import com.example.identifyer.model.Room
 import com.example.identifyer.ViewModel.UserViewModel
 import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.User
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,14 +48,14 @@ class MainActivity : AppCompatActivity() {
                 listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 5 ))
 
                 Rooms
-                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2))
-                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4))
-                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3))
-                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2))
-                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1))
-                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5))
+                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2, 3))
+                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4, 3))
+                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3, 2))
+                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2, 3))
+                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1, 1))
+                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5, 1))
 
-                User
+                User - kein Login authentifizierung
                 userViewModel.insert(User("User1", "Password1"))
                 userViewModel.insert(User("User2", "Password2"))
                 userViewModel.insert(User("User3", "Password3"))
@@ -77,14 +74,14 @@ class MainActivity : AppCompatActivity() {
     //Code scanner QR
     private lateinit var codeScanner: CodeScanner
 
-    //inmate
+    //View model inmate
     lateinit var inmateViewModel : InmateViewModel
     //ViewModel Rooms
     lateinit var roomViewModel : RoomViewModel
     //View Model user
     lateinit var userViewModel:UserViewModel
 
-
+    var scannedRoom = Room()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +90,17 @@ class MainActivity : AppCompatActivity() {
         roomViewModel = ViewModelProvider(this).get(RoomViewModel::class.java)
         inmateViewModel = ViewModelProvider(this).get(InmateViewModel::class.java)
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
+        Log.d("sdfadsf", "Done")
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO){
+
+                Log.d("ROOM", roomViewModel.getAllRooms().toString())
+                Log.d("INMATE", inmateViewModel.getAllInmates().toString())
+                Log.d("USER", userViewModel.getAllUsers().toString())
+            }
+        }
+
 
 
         if( ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED){
@@ -116,16 +124,18 @@ class MainActivity : AppCompatActivity() {
 
         codeScanner.decodeCallback = DecodeCallback{
 
+            val textString = it.text.toString()
 
-            //var inmateList = inmateViewModel.findInmateById(it.text.toLong())
             runOnUiThread {
                 Toast.makeText(this, "Roomnumber :${it.text.toString()} ", Toast.LENGTH_SHORT).show()
             }
-            //intent to inmate list
-            val intent = Intent(this, InmateListActivity::class.java)
-            intent.putExtra(InmateListActivity.ROOM_KEY, it.text.toString())
+
+
+            val intent = Intent(this, RoomActivity::class.java)
+            intent.putExtra(RoomActivity.ROOM_KEY, it.text.toString())
             startActivity(intent)
-            Log.d("Intent", " ")
+
+
         }
 
         codeScanner.errorCallback = ErrorCallback {
@@ -187,22 +197,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }else if(itemId == R.id.action_loadDatabase){
-            var newRoom = Room("1.11", listOf<String>("1", "2", "3"), 1)
-            var newUser = User("User3333333333333","password3")
-            var newInmate = Inmate("Firstname3","Lastname3", "male3", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 2 )
+
+            Log.d("Hello", inmateViewModel.getFilteredList("3").value.toString())
 
 
 
             lifecycleScope.launch {
                 withContext(Dispatchers.IO){
 
-                   var randomString  =roomViewModel.findRoomById(1)
+                   var randomString  = roomViewModel.findRoomById("1".toLong())
 
                     //Log.d("Roomcheck", randomString.id.toString())
                     Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(1).toString())
                     Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(2).toString())
-                    Log.d("Entries", inmateViewModel.getAllInmates().toString())
+                    Log.d("Entries", randomString.toString())
                 }
 
             }
