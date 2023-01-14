@@ -11,7 +11,25 @@
     <string name="inmate_offense_accomplices">Offense Accomplices: </string>
     <string name="inmate_combat_experience">Combat Experience: </string>
     <string name="inmate_additional_notes">Notes: </string>
-    <string name="inmate_room_id">Room: </string>
+    <string name="inmate_room_id">Room:</string>
     <string name="inmate_list">Inmate List</string>
+    <string name="room_name_tv">Room Name:</string>
+    <string name="room_tract_tv">Tract:</string>
+    <string name="room_security_level_tv">Security Level:</string>
+    <string name="room_max_capacity_tv">Max Capacity:</string>
+    <string name="inmate_full_name_tv">Full Name:</string>
+    <string name="inmate_gender_tv">Gender:</string>
+    <string name="inmate_date_of_birth_tv">Date Of Birth:</string>
+    <string name="inmate_arrival_date_tv">Arrival Date:</string>
+    <string name="inmate_nationality_tv">Nationality:</string>
+    <string name="inmate_sentence_tv">Sentence:</string>
+    <string name="inmate_time_of_sentence_tv">Time of Sentence:</string>
+    <string name="inmate_security_level_tv">Security Level:</string>
+    <string name="inmate_physical_wellness_tv">Physical Wellness:</string>
+    <string name="inmate_mental_wellness_tv">Mental Wellness:</string>
+    <string name="inmate_combat_experience_tv">Combat Experience:</string>
+    <string name="inmate_additional_notes_tv">Additional Notes:</string>
+    <string name="inmate_room_id_tv">Room ID:</string>
+    <string name="room_scanned_text">Room scanned:</string>
 
 </resources>

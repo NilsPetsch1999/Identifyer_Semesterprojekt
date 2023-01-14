@@ -36,7 +36,7 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
     fun getRoomData(s: String): LiveData<List<Room>> {
         return Transformations.map(mRoomEntries) { items ->
             items.filter {
-                it.id.toString().contains(s)
+                it.id.toString() == s
 
             }
 

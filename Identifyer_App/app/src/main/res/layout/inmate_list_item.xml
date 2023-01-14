@@ -6,117 +6,335 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_inmate_full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:fontFamily="@font/oswald_regular"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_full_name_tv"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:fontFamily="@font/oswald_bold"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            />
 
-    <TextView
-        android:id="@+id/tv_inmate_gender"
-        android:layout_width="match_parent"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_gender_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_date_of_birth_tv"
+            android:fontFamily="@font/oswald_regular"/>
+        <TextView
+            android:id="@+id/tv_inmate_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/tv_inmate_date_of_birth"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+        android:orientation="horizontal">
+        <TextView
 
-    <TextView
-        android:id="@+id/tv_inmate_arrival_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_time_of_sentence"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_arrival_date_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_arrival_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
 
-    <TextView
-        android:id="@+id/tv_inmate_security_lvl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_physical_wellness"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_inmate_mental_wellness"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_offense_list"
-        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_nationality_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_nationality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_offense_Accomplices"
-        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_sentence_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_sentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_combat_experience"
-        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_time_of_sentence_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_time_of_sentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_additional_notes"
-        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_security_level_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_security_lvl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/tv_inmate_room_id"
-        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_physical_wellness_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_physical_wellness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:paddingTop= "4dp"
-        android:paddingBottom="1dp"
-        />
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_mental_wellness_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_mental_wellness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_combat_experience_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_combat_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:text="@string/inmate_additional_notes_tv"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_additional_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/inmate_room_id_tv"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_regular"
+            />
+        <TextView
+            android:id="@+id/tv_inmate_room_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:paddingTop= "4dp"
+            android:paddingBottom="1dp"
+            android:fontFamily="@font/oswald_bold"
+            />
+
+    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"

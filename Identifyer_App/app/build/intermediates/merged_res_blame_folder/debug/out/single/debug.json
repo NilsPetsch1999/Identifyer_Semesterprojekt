@@ -1,5 +1,57 @@
 [
     {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\font_arsenal_regular.ttf.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\font\\arsenal_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\menu_main.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\font_oswald_regular.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\font\\oswald_regular.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_room_list_item.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\room_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_scanned_room.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_scanned_room.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\font_oswald_bold.ttf.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\font\\oswald_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_inmatelist.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_inmatelist.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -16,36 +68,16 @@
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\xml\\pref_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_settings.xml.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_settings.xml"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\menu_main.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_room_list_item.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\room_list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -56,35 +88,15 @@
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_scanned_room.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_scanned_room.xml"
-    },
-    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_inmatelist.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\activity_inmatelist.xml"
-    },
-    {
         "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\layout_inmate_list_item.xml.flat",
         "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\src\\main\\res\\layout\\inmate_list_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     }
 ]

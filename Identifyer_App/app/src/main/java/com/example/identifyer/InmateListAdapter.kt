@@ -26,13 +26,15 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
         private val mItemFullNameTextView = itemView.findViewById<TextView>(R.id.tv_inmate_full_name)
         private val mItemGenderTextView = itemView.findViewById<TextView>(R.id.tv_inmate_gender)
         private val mItemDateOfBirthTextView = itemView.findViewById<TextView>(R.id.tv_inmate_date_of_birth)
+        private val mItemNationalityTextView = itemView.findViewById<TextView>(R.id.tv_inmate_nationality)
+        private val mItemSentenceTextView = itemView.findViewById<TextView>(R.id.tv_inmate_sentence)
         private val mItemArrivalDateTextView = itemView.findViewById<TextView>(R.id.tv_inmate_arrival_date)
         private val mItemTimeOfSentenceTextView = itemView.findViewById<TextView>(R.id.tv_inmate_time_of_sentence)
         private val mItemSecurityLvlTextView = itemView.findViewById<TextView>(R.id.tv_inmate_security_lvl)
         private val mItemPhysicalWellnessTextView = itemView.findViewById<TextView>(R.id.tv_inmate_physical_wellness)
         private val mItemMentalWellnessTextView = itemView.findViewById<TextView>(R.id.tv_inmate_mental_wellness)
-        private val mItemOffenseListTextView = itemView.findViewById<TextView>(R.id.tv_inmate_offense_list)
-        private val mItemOffenseAccomplicesTextView = itemView.findViewById<TextView>(R.id.tv_inmate_offense_Accomplices)
+        //private val mItemOffenseListTextView = itemView.findViewById<TextView>(R.id.tv_inmate_offense_list)
+        //private val mItemOffenseAccomplicesTextView = itemView.findViewById<TextView>(R.id.tv_inmate_offense_Accomplices)
         private val mItemCombatExperienceTextView = itemView.findViewById<TextView>(R.id.tv_inmate_combat_experience)
         private val mItemAdditionalNotesTextView = itemView.findViewById<TextView>(R.id.tv_inmate_additional_notes)
         private val mItemRoomIdTextView = itemView.findViewById<TextView>(R.id.tv_inmate_room_id)
@@ -47,20 +49,21 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
 
         fun bind (index: Int){
 
-            mItemFullNameTextView.text= "Full Name: " + items[index].firstname + " " + items[index].lastname
-            mItemGenderTextView.text = "Gender: " + items[index].gender
-            mItemDateOfBirthTextView.text = "Date of Birth: " + items[index].dateOfBirth
-            mItemArrivalDateTextView.text = "Arrival Date: " + items[index].arrivalDate
-
-            mItemTimeOfSentenceTextView.text = "Time of Sentence: "+ items[index].timeOfSentence
-            mItemSecurityLvlTextView.text = "SecurityLevel: "+ items[index].securityLevel
-            mItemPhysicalWellnessTextView.text = "Physical Wellness: " + items[index].physicalWellness
-            mItemMentalWellnessTextView.text = "Mental Wellness: "+ items[index].mentalWellness
-            mItemOffenseListTextView.text = "Offense List: " + items[index].offenseList?.joinToString(";")
-            mItemOffenseAccomplicesTextView.text = "Offense List: " + items[index].offenseAccomplices!!.joinToString("-")
-            mItemCombatExperienceTextView.text = "Combat Experience: " + items[index].combatExperience
-            mItemAdditionalNotesTextView.text = "Notes: \n###" +  items[index].additionalNotes!!.joinToString(" \n### ")
-            mItemRoomIdTextView.text = "Room ID: " +items[index].room_id
+            mItemFullNameTextView.text= items[index].firstname + " " + items[index].lastname
+            mItemGenderTextView.text = items[index].gender
+            mItemDateOfBirthTextView.text = items[index].dateOfBirth.toString()
+            mItemArrivalDateTextView.text = items[index].arrivalDate.toString()
+            mItemNationalityTextView.text = items[index].nationality
+            mItemSentenceTextView.text = items[index].sentence
+            mItemTimeOfSentenceTextView.text = items[index].timeOfSentence.toString()
+            mItemSecurityLvlTextView.text = items[index].securityLevel.toString()
+            mItemPhysicalWellnessTextView.text = items[index].physicalWellness
+            mItemMentalWellnessTextView.text = items[index].mentalWellness
+            //mItemOffenseListTextView.text = "Offense List: " + items[index].offenseList?.joinToString(";")
+            //mItemOffenseAccomplicesTextView.text = "Offense List: " + items[index].offenseAccomplices!!.joinToString("-")
+            mItemCombatExperienceTextView.text = items[index].combatExperience
+            mItemAdditionalNotesTextView.text = "\n### " + items[index].additionalNotes!!.joinToString(" \n### ")
+            mItemRoomIdTextView.text = items[index].room_id.toString()
         }
 
 

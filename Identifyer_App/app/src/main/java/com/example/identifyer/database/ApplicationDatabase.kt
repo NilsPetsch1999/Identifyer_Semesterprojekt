@@ -12,7 +12,7 @@ import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 import com.example.identifyer.model.User
 
-@Database(entities = [User::class, Room::class, Inmate::class], version = 4)
+@Database(entities = [User::class, Room::class, Inmate::class], version = 5)
 @TypeConverters(ListConverter::class)
 abstract class ApplicationDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao
@@ -31,7 +31,7 @@ abstract class ApplicationDatabase : RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context) =
-            androidx.room.Room.databaseBuilder(context, ApplicationDatabase::class.java, "myDb")
+            androidx.room.Room.databaseBuilder(context, ApplicationDatabase::class.java, "myDb").fallbackToDestructiveMigration()
                 .build()
 
         fun getDatabase(context: Context): ApplicationDatabase {

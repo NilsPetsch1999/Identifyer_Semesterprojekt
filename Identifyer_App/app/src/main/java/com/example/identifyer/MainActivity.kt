@@ -30,30 +30,29 @@ class MainActivity : AppCompatActivity() {
 
                 Inmates
 
-                inmateViewModel.insert(Inmate("John","Doe", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 1 ))
-                inmateViewModel.insert(Inmate("Maurice","Jefferson", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 3 ))
-                inmateViewModel.insert(Inmate("Patrick","Mahomes", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 6 ))
-                inmateViewModel.insert(Inmate("Nils","Petsch", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 3 ))
-                inmateViewModel.insert(Inmate("Flo","Huber", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 2 ))
-                inmateViewModel.insert(Inmate("Christian","McCaffrey", "male", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 4 ))
-                inmateViewModel.insert(Inmate("Felix","Engelmeier", "male3", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 6 ))
-                inmateViewModel.insert(Inmate("Lara","Roth", "male3", 3, 3, 3, 3,"Test3","Test3",
-                listOf("1", "2"), listOf("1", "2", "3"), "3 years Karate", listOf("1", "2", "3"), 5 ))
+                inmateViewModel.insert(Inmate("John","Doe", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3", "3 years Karate", listOf("1", "2", "3"), 1 ))
+                inmateViewModel.insert(Inmate("Maurice","Jefferson", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 3 ))
+                inmateViewModel.insert(Inmate("Patrick","Mahomes", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 6 ))
+                inmateViewModel.insert(Inmate("Nils","Petsch", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 3 ))
+                inmateViewModel.insert(Inmate("Flo","Huber", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                "3 years Karate", listOf("1", "2", "3"), 2 ))
+                inmateViewModel.insert(Inmate("Christian","McCaffrey", "male", 3,"Austria","Drugs Dealing", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 4 ))
+                inmateViewModel.insert(Inmate("Felix","Engelmeier", "male3", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 6 ))
+                inmateViewModel.insert(Inmate("Lara","Roth", "male3", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
+                 "3 years Karate", listOf("1", "2", "3"), 5 ))
 
                 Rooms
-                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2, 3))
-                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4, 3))
-                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3, 2))
-                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2, 3))
-                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1, 1))
-                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5, 1))
+                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2, 3, 2 ))
+                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4, 3, 2 ))
+                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3, 2, 2 ))
+                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2, 3, 3 ))
+                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1, 1, 4 ))
+                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5, 1, 4 ))
 
                 User - kein Login authentifizierung
                 userViewModel.insert(User("User1", "Password1"))
@@ -94,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("sdfadsf", "Done")
         lifecycleScope.launch {
             withContext(Dispatchers.IO){
-
+                // to do: filter for room id works but needs to be changed !!!!!!!!!!!!!!!!!!!!!!!!! contains -> equals !!!!!!!!
                 Log.d("ROOM", roomViewModel.getAllRooms().toString())
                 Log.d("INMATE", inmateViewModel.getAllInmates().toString())
                 Log.d("USER", userViewModel.getAllUsers().toString())

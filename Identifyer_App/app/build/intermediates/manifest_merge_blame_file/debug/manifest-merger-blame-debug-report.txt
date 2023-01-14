@@ -22,7 +22,7 @@
 15-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:8:9-33
 16
 17    <application
-17-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:10:5-35:19
+17-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:10:5-39:19
 18        android:allowBackup="true"
 18-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:11:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -75,36 +75,43 @@
 43            </intent-filter>
 44        </activity>
 45
-46        <service
-46-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
-47            android:name="androidx.room.MultiInstanceInvalidationService"
-47-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
-48            android:directBootAware="true"
-48-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
-49            android:exported="false" />
-49-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
-50
-51        <provider
-51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-52            android:name="androidx.startup.InitializationProvider"
-52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
-53            android:authorities="com.example.identifyer.androidx-startup"
-53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
-54            android:exported="false" >
-54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
-55            <meta-data
-55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
-57                android:value="androidx.startup" />
-57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
-58            <meta-data
-58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-60                android:value="androidx.startup" />
-60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-61        </provider>
-62    </application>
-63
-64</manifest>
+46        <meta-data
+46-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:36:9-38:57
+47            android:name="preloaded_fonts"
+47-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:37:13-43
+48            android:resource="@array/preloaded_fonts" />
+48-->C:\Users\Nils_\Documents\GitHub\Identifyer_Semesterprojekt\Identifyer_App\app\src\main\AndroidManifest.xml:38:13-54
+49
+50        <service
+50-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+51            android:name="androidx.room.MultiInstanceInvalidationService"
+51-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+52            android:directBootAware="true"
+52-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+53            android:exported="false" />
+53-->[androidx.room:room-runtime:2.4.2] C:\Users\Nils_\.gradle\caches\transforms-3\3d3c3592014ded92f9b13ce927e06518\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+54
+55        <provider
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+56            android:name="androidx.startup.InitializationProvider"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+57            android:authorities="com.example.identifyer.androidx-startup"
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+58            android:exported="false" >
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+59            <meta-data
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+61                android:value="androidx.startup" />
+61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nils_\.gradle\caches\transforms-3\2ea2dd8e1da7b7cd2870eb21b04b6245\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+62            <meta-data
+62-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+63-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+64                android:value="androidx.startup" />
+64-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nils_\.gradle\caches\transforms-3\ee8401cefc63a669f7995fd5a1deff3b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+65        </provider>
+66    </application>
+67
+68</manifest>

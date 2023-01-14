@@ -41,7 +41,7 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
     fun getFilteredList(s: String): LiveData<List<Inmate>> {
         return Transformations.map(mInmateEntries) { items ->
             items.filter {
-                it.room_id.toString().contains(s)
+                it.room_id.toString() == s
             }
         }
     }

@@ -39,10 +39,10 @@ class RoomAdapter(items : List<Room> = listOf()) : RecyclerView.Adapter<RoomAdap
         }
 
         fun bind (index: Int){
-            mItemRoomName.text =  "Roomname: " + items[index].roomNumber
-            mItemSecurityLevel.text = "Security Level: " +items[index].securityLevel.toString()
-            mItemTract.text = "Tract: " + items[index].tract.toString()
-            mItemMaxCapacity.text = "Max Capacity: " + items[index].maxCapacity.toString()
+            mItemRoomName.text =  items[index].roomNumber
+            mItemSecurityLevel.text = items[index].securityLevel.toString()
+            mItemTract.text = items[index].tract.toString()
+            mItemMaxCapacity.text = items[index].maxCapacity.toString()
 
 
         }

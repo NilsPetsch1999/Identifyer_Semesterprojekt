@@ -13,20 +13,22 @@ data class Inmate(
     @ColumnInfo @NonNull var lastname : String? ,
     @ColumnInfo @NonNull var gender : String? ,
     @ColumnInfo @NonNull var dateOfBirth : Long? , //Convert to date String
+    @ColumnInfo @NonNull var nationality : String? ,// added
+    @ColumnInfo @NonNull var sentence : String? ,
     @ColumnInfo @NonNull var arrivalDate : Long? , //Convert to date String
     @ColumnInfo @NonNull var timeOfSentence : Long? , //Convert to date String
     @ColumnInfo @NonNull var securityLevel : Int? , //maybe enum ?
     @ColumnInfo @NonNull var physicalWellness : String? ,
     @ColumnInfo @NonNull var mentalWellness : String? ,
-    @ColumnInfo @NonNull var offenseList : List<String>? , //List of the offenses of a person made
-    @ColumnInfo @NonNull var offenseAccomplices : List<String>? , // inmates or all  known accomplices  ?
+    //@ColumnInfo @NonNull var offenseList : List<String>? ,
+    //@ColumnInfo @NonNull var offenseAccomplices : List<String>? ,
     @ColumnInfo @NonNull var combatExperience : String? ,
     @ColumnInfo @NonNull var additionalNotes : List<String>? ,
     @ColumnInfo @NonNull var room_id : Long? , //Foreign Key to add
 ) :Serializable {
 
     @Ignore
-    constructor(firstname: String?, lastname: String?,gender:String?, dateOfBirth:Long?, arrivalDate : Long?, timeOfSentence : Long? , securityLevel : Int?, physicalWellness : String?, mentalWellness : String?, offenseList : List<String>?, offenseAccomplices : List<String>?, combatExperience : String?, additionalNotes : List<String>?, room_id : Long? ):this(null, firstname, lastname, gender, dateOfBirth, arrivalDate, timeOfSentence, securityLevel, physicalWellness, mentalWellness, offenseList, offenseAccomplices, combatExperience, additionalNotes, room_id)
+    constructor(firstname: String?, lastname: String?,gender:String?, dateOfBirth:Long?,nationality: String?, sentence: String?, arrivalDate : Long?, timeOfSentence : Long? , securityLevel : Int?, physicalWellness : String?, mentalWellness : String?, combatExperience : String?, additionalNotes : List<String>?, room_id : Long? ):this(null, firstname, lastname, gender, dateOfBirth, nationality, sentence, arrivalDate, timeOfSentence, securityLevel, physicalWellness, mentalWellness, combatExperience, additionalNotes, room_id)
 
-    constructor(): this( "", "", "", null, null, null, null,"", "", emptyList(), emptyList(), "", emptyList(), null )
+    constructor(): this( "", "", "", null, "", "", null,null, null, "", "", "", emptyList(), null )
 }

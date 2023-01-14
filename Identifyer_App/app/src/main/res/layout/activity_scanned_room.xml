@@ -7,9 +7,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ROOM"
-        android:textSize="22dp"
-        android:layout_gravity="center"/>
+        android:text="@string/room_scanned_text"
+        android:textSize="35dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/oswald_bold"
+        android:textColor="@color/blue"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_scannedRoom"
