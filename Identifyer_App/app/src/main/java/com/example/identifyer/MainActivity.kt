@@ -42,8 +42,7 @@ class MainActivity : AppCompatActivity() {
     //View Model user
     lateinit var userViewModel:UserViewModel
 
-
-        //Testdata
+    //Testdata
     var jsonTestData : String = "{\n" +
             "  \"room\": [\n" +
             "    {\"id\":\"1\", \"roomNumber\":\"1.11\", \"tract\" : \"A\", \"securityLevel\":\"1\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
@@ -191,9 +190,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }else if(itemId == R.id.action_loadDatabase){
-
+            //sync Database
             syncDatabase()
-
             return true
         }
         return super.onOptionsItemSelected(item)
