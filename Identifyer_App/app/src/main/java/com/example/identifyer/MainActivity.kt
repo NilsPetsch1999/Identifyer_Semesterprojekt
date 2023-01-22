@@ -18,55 +18,17 @@ import com.example.identifyer.ViewModel.InmateViewModel
 import com.example.identifyer.ViewModel.RoomViewModel
 import com.example.identifyer.model.Room
 import com.example.identifyer.ViewModel.UserViewModel
+
 import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.User
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
 import kotlinx.coroutines.*
+import kotlinx.serialization.json.JsonObject
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
-
-    //Testdaten
-
-    /*
-
-                Inmates
-
-                inmateViewModel.insert(Inmate("John","Doe", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3", "3 years Karate", listOf("1", "2", "3"), 1 ))
-                inmateViewModel.insert(Inmate("Maurice","Jefferson", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 3 ))
-                inmateViewModel.insert(Inmate("Patrick","Mahomes", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 6 ))
-                inmateViewModel.insert(Inmate("Nils","Petsch", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 3 ))
-                inmateViewModel.insert(Inmate("Flo","Huber", "male", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                "3 years Karate", listOf("1", "2", "3"), 2 ))
-                inmateViewModel.insert(Inmate("Christian","McCaffrey", "male", 3,"Austria","Drugs Dealing", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 4 ))
-                inmateViewModel.insert(Inmate("Felix","Engelmeier", "male3", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 6 ))
-                inmateViewModel.insert(Inmate("Lara","Roth", "male3", 3,"Austria","Robbery", 3, 3, 3,"Test3","Test3",
-                 "3 years Karate", listOf("1", "2", "3"), 5 ))
-
-                Rooms
-                roomViewModel.insert(Room("1.11", listOf<String>("1", "2", "3"), 2, 3, 2 ))
-                roomViewModel.insert(Room("2.22", listOf<String>("1", "2", "3"), 4, 3, 2 ))
-                roomViewModel.insert(Room("3.33", listOf<String>("1", "2", "3"), 3, 2, 2 ))
-                roomViewModel.insert(Room("4.44", listOf<String>("1", "2", "3"), 2, 3, 3 ))
-                roomViewModel.insert(Room("5.55", listOf<String>("1", "2", "3"), 1, 1, 4 ))
-                roomViewModel.insert(Room("6.66", listOf<String>("1", "2", "3"), 5, 1, 4 ))
-
-                User - kein Login authentifizierung
-                userViewModel.insert(User("User1", "Password1"))
-                userViewModel.insert(User("User2", "Password2"))
-                userViewModel.insert(User("User3", "Password3"))
-                userViewModel.insert(User("User4", "Password4"))
-                userViewModel.insert(User("User5", "Password5"))
-
-
-
-
-     */
-
-
 
 
 
@@ -80,7 +42,20 @@ class MainActivity : AppCompatActivity() {
     //View Model user
     lateinit var userViewModel:UserViewModel
 
-    var scannedRoom = Room()
+
+        //Testdata
+    var jsonTestData : String = "{\n" +
+            "  \"room\": [\n" +
+            "    {\"id\":\"1\", \"roomNumber\":\"1.11\", \"tract\" : \"A\", \"securityLevel\":\"1\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
+            "  {\"id\":\"2\", \"roomNumber\":\"2.22\", \"tract\" : \"B\", \"securityLevel\":\"2\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
+            "  {\"id\":\"3\", \"roomNumber\":\"3.33\", \"tract\" : \"C\", \"securityLevel\":\"3\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
+            "  {\"id\":\"4\", \"roomNumber\":\"4.44\", \"tract\" : \"D\", \"securityLevel\":\"4\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
+            "  {\"id\":\"5\", \"roomNumber\":\"5.55\", \"tract\" : \"E\", \"securityLevel\":\"5\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}, \n" +
+            "  {\"id\":\"6\", \"roomNumber\":\"6.66\", \"tract\" : \"F\", \"securityLevel\":\"6\", \"maxCapacity\": \"4\", \"inmateList\":[\"1\",\"3\", \"6\"]}], \n" +
+            "  \"inmates\": [\n" +
+            "    {\"id\": \"1\", \"firstname\" : \"John\", \"lastname\": \"Doe\", \"gender\": \"male\", \"dateOfBirth\": \"11.11.1911\", \"nationality\":\"Austria\", \"sentence\": \"Robbery\", \"arrivalDate\": \"23.4.2020\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"1\", \"physicalWellness\":\"No Comment\", \"mentalWellness\":\"Depressions\", \"combatExperience\":\"7 years of UFC, Gangmember\", \"additionalNotes\":[\"Former Gangmember\", \"Likes to be funny\", \"sarcastic\"], \"room_id\": \"1\"}, {\"id\": \"2\", \"firstname\" : \"Nils\", \"lastname\": \"Petsch\", \"gender\": \"male\", \"dateOfBirth\": \"24.05.1999\", \"nationality\":\"Austria\", \"sentence\": \"Robbery\", \"arrivalDate\": \"25.05.2021\", \"TimeOfSentence\":\"5 Years\",\"securityLevel\":\"4\", \"physicalWellness\":\"knee porblems\", \"mentalWellness\":\"No comment\", \"combatExperience\":\"7 Karate, 3 Years Muy Thai\", \"additionalNotes\":[\"Former Footballer\", \"Likes to sniff gas\", \"loves alcohol\"], \"room_id\": \"2\"}, {\"id\": \"3\", \"firstname\" : \"Flo\", \"lastname\": \"Huber\", \"gender\": \"male\", \"dateOfBirth\": \"24.07.1988\", \"nationality\":\"Austria\", \"sentence\": \"Played Yi in League of Legends\", \"arrivalDate\": \"15.03.2021\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"3\", \"physicalWellness\":\"No Comment\", \"mentalWellness\":\"Who the fuck plays YI ???\", \"combatExperience\":\"One punch and u gone\", \"additionalNotes\":[\"Former E-Sport Player\", \"Likes small things\", \"loves YI\"], \"room_id\": \"3\"}, {\"id\": \"4\", \"firstname\" : \"Felix\", \"lastname\": \"Engelmeier\", \"gender\": \"male\", \"dateOfBirth\": \"14.12.1999\", \"nationality\":\"Austria\", \"sentence\": \"Did the homework\", \"arrivalDate\": \"10.06.2022\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"2\", \"physicalWellness\":\"No Comment\", \"mentalWellness\":\"No comment\", \"combatExperience\":\"10 Years Muy Thai\", \"additionalNotes\":[\"Former Pro Chess Player\", \"Likes to sniff on glue\", \"loves alcohol\"], \"room_id\": \"4\"}, {\"id\": \"5\", \"firstname\" : \"Lara\", \"lastname\": \"Roth\", \"gender\": \"female\", \"dateOfBirth\": \"13.11.1998\", \"nationality\":\"Austria\", \"sentence\": \"Supporting Planktion\", \"arrivalDate\": \"25.10.2021\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"4\", \"physicalWellness\":\"trained \", \"mentalWellness\":\"No comment\", \"combatExperience\":\"7 Karate, 3 Years Muy Thai\", \"additionalNotes\":[\"Former Athlete\", \"Likes to sry\", \"loves alcohol\"], \"room_id\": \"5\"}, {\"id\": \"6\", \"firstname\" : \"Patrick\", \"lastname\": \"Star\", \"gender\": \"male\", \"dateOfBirth\": \"13.12.1998\", \"nationality\":\"Austria\", \"sentence\": \"Eating a burger at 3 am\", \"arrivalDate\": \"25.10.2021\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"4\", \"physicalWellness\":\"star fish \", \"mentalWellness\":\"dumb\", \"combatExperience\":\"weights a lot\", \"additionalNotes\":[\"Former Sum-Ringer\", \"Likes to eat\", \"loves spongebob\"], \"room_id\": \"6\"}, {\"id\": \"7\", \"firstname\" : \"Spongebob\", \"lastname\": \"Schwammkopf\", \"gender\": \"male\", \"dateOfBirth\": \"23.12.1998\", \"nationality\":\"Austria\", \"sentence\": \"Forgetting how to do a crabby burger\", \"arrivalDate\": \"25.10.2021\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"5\", \"physicalWellness\":\"sponge\", \"mentalWellness\":\"smart sponge\", \"combatExperience\":\"spacuala master\", \"additionalNotes\":[\"Former Cook\", \"Likes to cook\", \"loves patrick\"], \"room_id\": \"1\"},{\"id\": \"8\", \"firstname\" : \"Tadeus\", \"lastname\": \"Tentakel\", \"gender\": \"male\", \"dateOfBirth\": \"23.12.1998\", \"nationality\":\"Austria\", \"sentence\": \"Forgetting how to do a crabby burger\", \"arrivalDate\": \"25.10.2021\", \"timeOfSentence\":\"5 Years\",\"securityLevel\":\"5\", \"physicalWellness\":\"sponge\", \"mentalWellness\":\"smart sponge\", \"combatExperience\":\"spacuala master\", \"additionalNotes\":[\"Former Cook\", \"Likes to cook\", \"loves patrick\"], \"room_id\": \"1\"}\n" +
+            "  ]\n" +
+            "}";
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,17 +65,6 @@ class MainActivity : AppCompatActivity() {
         inmateViewModel = ViewModelProvider(this).get(InmateViewModel::class.java)
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-        Log.d("sdfadsf", "Done")
-        lifecycleScope.launch {
-            withContext(Dispatchers.IO){
-                // to do: filter for room id works but needs to be changed !!!!!!!!!!!!!!!!!!!!!!!!! contains -> equals !!!!!!!!
-                Log.d("ROOM", roomViewModel.getAllRooms().toString())
-                Log.d("INMATE", inmateViewModel.getAllInmates().toString())
-                Log.d("USER", userViewModel.getAllUsers().toString())
-            }
-        }
-
-
 
         if( ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA),123)
@@ -108,6 +72,37 @@ class MainActivity : AppCompatActivity() {
             startScanning()
         }
 
+    }
+
+    //deleting rooms and inmates
+     suspend private fun deleteAllRoomsInmates(){
+
+        roomViewModel.deleteAllRooms();
+        inmateViewModel.deleteAllInmates();
+    }
+        //response from http request --> parses Response and inserts the data
+    private fun parseJson(reponse:String){
+
+        var obj = JSONObject(reponse);
+        var roomObj = obj["room"].toString();
+        var inmateObj = obj["inmates"].toString();
+
+
+        val typeTokenRooms = object : TypeToken<List<Room>>(){}.type;
+        val rooms = Gson().fromJson<List<Room>>(roomObj, typeTokenRooms);
+
+        val typeTokenInmates = object : TypeToken<List<Inmate>>(){}.type;
+        val inmates = Gson().fromJson<List<Inmate>>(inmateObj, typeTokenInmates);
+
+        for (item: Room in rooms ){
+            val newRoom : Room = Room(item.id,item.roomNumber, item.inmateList, item.securityLevel, item.tract, item.maxCapacity );
+            roomViewModel.insert(newRoom)
+        }
+
+        for (item: Inmate in inmates){
+            val newInmate : Inmate = Inmate(item.id, item.firstname, item.lastname, item.gender, item.dateOfBirth, item.nationality, item.sentence, item.arrivalDate, item.timeOfSentence,item.securityLevel, item.physicalWellness, item.mentalWellness, item.combatExperience, item.additionalNotes, item.room_id)
+            inmateViewModel.insert(newInmate)
+        }
     }
 
     //Scanning function
@@ -189,7 +184,7 @@ class MainActivity : AppCompatActivity() {
     //Menu when item is clicked
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val itemId: Int = item.itemId
-        var newUser2 :User
+
         if(itemId == R.id.action_settings){
             //What to do when clicking on settings
             val intent = Intent(this, SettingsActivity::class.java)
@@ -197,27 +192,19 @@ class MainActivity : AppCompatActivity() {
             return true
         }else if(itemId == R.id.action_loadDatabase){
 
-            Log.d("Hello", inmateViewModel.getFilteredList("3").value.toString())
-
-
-
-            lifecycleScope.launch {
-                withContext(Dispatchers.IO){
-
-                   var randomString  = roomViewModel.findRoomById("1".toLong())
-
-                    //Log.d("Roomcheck", randomString.id.toString())
-                    Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(1).toString())
-                    Log.d("Entries", inmateViewModel.getAllInmatesByRoomId(2).toString())
-                    Log.d("Entries", randomString.toString())
-                }
-
-            }
+            syncDatabase()
 
             return true
         }
         return super.onOptionsItemSelected(item)
     }
-
+    //method which calls the http request method --> gets response as String which-->validate if empty --> delete all entries if not empty--> parses response and inserts the data
+    private fun syncDatabase(){
+        lifecycleScope.launch {
+            deleteAllRoomsInmates()
+            delay(1000)
+            parseJson(jsonTestData)
+        }
+    }
 
 }

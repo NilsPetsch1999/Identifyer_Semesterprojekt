@@ -34,4 +34,8 @@ class InmateRepository(private val inmateDao: InmateDao) {
 
         return inmateDao.findInmatesByRoomId(id)
     }
+
+    fun delteAll(){
+        inmateDao.deleteAllInmates()
+    }
 }

@@ -19,9 +19,6 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
     private val inmateRepository : InmateRepository
 
     val mInmateEntries : LiveData<List<Inmate>>
-
-
-
    
     val errorMsg by lazy { MutableLiveData<String?>(null) }
 
@@ -46,8 +43,12 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun getAllInmates(): List<Inmate>{
-        return inmateRepository.getAllInmates()
+    suspend fun getAllInmates(): List<Inmate>{
+        val inmates :List<Inmate>;
+        withContext(Dispatchers.IO){
+            inmates = inmateRepository.getAllInmates()
+        }
+        return inmates
     }
 
     fun getAllInmatesByRoomId(id : Long): List<Inmate>{
@@ -64,6 +65,9 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
             inmate.lastname = "NoLastname"
         }
 
+
+
+
         val firstname = inmate.firstname
         val lastname = inmate.lastname
 
@@ -74,7 +78,7 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
                 withContext(Dispatchers.IO){
                     try {
                         inmateRepository.insert(inmate)
-
+                        Log.d("insertInmate" ,inmate.firstname.toString())
                     }catch (ex : ExecutionException){
                         Log.d("Error", "an error was thrown")
                     }
@@ -83,8 +87,19 @@ class InmateViewModel(application: Application) : AndroidViewModel(application) 
                 errorMsg.value = "This entry already exists!"
 
             }catch (ex: Exception){
-                errorMsg.value = "An error occured. Please try again later!"
+                errorMsg.value = "An error occurred. Please try again later!"
             }
         }
+    }
+
+    suspend fun deleteAllInmates()= withContext(Dispatchers.IO) {
+
+        try {
+            inmateRepository.delteAll();
+            Log.d("Success", "Deleted all Inmates")
+        }catch (ex : ExecutionException){
+            Log.d("Error", "an error was thrown")
+        }
+
     }
 }

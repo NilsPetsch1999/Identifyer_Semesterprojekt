@@ -30,4 +30,7 @@ interface InmateDao {
 
     @Query("SELECT * FROM inmate WHERE inmate.room_id = :roomId")
     fun findInmatesByRoomId(roomId :Long): List<Inmate>
+
+    @Query("DELETE FROM inmate")
+    fun deleteAllInmates()
 }

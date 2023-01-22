@@ -2,20 +2,12 @@ package com.example.identifyer
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.LinearLayout
-import android.widget.ListAdapter
-import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.identifyer.ViewModel.InmateViewModel
-import com.example.identifyer.model.Inmate
-import com.example.identifyer.model.Room
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.example.identifyer.adapters.InmateListAdapter
 
 class InmateListActivity : AppCompatActivity() {
     companion object {
@@ -37,14 +29,7 @@ class InmateListActivity : AppCompatActivity() {
         inmateRecyclerView.setHasFixedSize(true)
         inmateRecyclerView.adapter = adapter
 
-
-
-
-
-        Log.d("DFASDFASDF",intent.getStringExtra(LIST_KEY)!! )
-
-
-
+        //Log.d("DFASDFASDF",intent.getStringExtra(LIST_KEY)!! )
       //  val scannedRoom = ((intent.getSerializableExtra(ROOM_KEY)as Room).id).toString()
 
         inmateViewModel.getFilteredList(intent.getStringExtra(LIST_KEY)!!).observe(this){ entries->

@@ -12,7 +12,7 @@ import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 import com.example.identifyer.model.User
 
-@Database(entities = [User::class, Room::class, Inmate::class], version = 5)
+@Database(entities = [User::class, Room::class, Inmate::class], version = 13)
 @TypeConverters(ListConverter::class)
 abstract class ApplicationDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao
@@ -31,13 +31,14 @@ abstract class ApplicationDatabase : RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context) =
-            androidx.room.Room.databaseBuilder(context, ApplicationDatabase::class.java, "myDb").fallbackToDestructiveMigration()
+            androidx.room.Room.databaseBuilder(context, ApplicationDatabase::class.java, "myDb").allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .build()
 
         fun getDatabase(context: Context): ApplicationDatabase {
             val instance = androidx.room.Room.databaseBuilder(context.applicationContext,
                 ApplicationDatabase::class.java, "identifyer").build()
-            INSTANCE =instance
+            INSTANCE = instance
             return instance
         }
 

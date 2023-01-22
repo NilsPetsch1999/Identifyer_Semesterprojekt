@@ -1,12 +1,12 @@
-package com.example.identifyer
+package com.example.identifyer.adapters
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.identifyer.R
 import com.example.identifyer.model.Inmate
 
 class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<InmateListAdapter.ItemViewHolder>() {
@@ -37,7 +37,7 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
         //private val mItemOffenseAccomplicesTextView = itemView.findViewById<TextView>(R.id.tv_inmate_offense_Accomplices)
         private val mItemCombatExperienceTextView = itemView.findViewById<TextView>(R.id.tv_inmate_combat_experience)
         private val mItemAdditionalNotesTextView = itemView.findViewById<TextView>(R.id.tv_inmate_additional_notes)
-        private val mItemRoomIdTextView = itemView.findViewById<TextView>(R.id.tv_inmate_room_id)
+        //private val mItemRoomIdTextView = itemView.findViewById<TextView>(R.id.tv_inmate_room_id)
 
 
         init {
@@ -62,8 +62,8 @@ class InmateListAdapter(items : List<Inmate> = listOf()) : RecyclerView.Adapter<
             //mItemOffenseListTextView.text = "Offense List: " + items[index].offenseList?.joinToString(";")
             //mItemOffenseAccomplicesTextView.text = "Offense List: " + items[index].offenseAccomplices!!.joinToString("-")
             mItemCombatExperienceTextView.text = items[index].combatExperience
-            mItemAdditionalNotesTextView.text = "\n### " + items[index].additionalNotes!!.joinToString(" \n### ")
-            mItemRoomIdTextView.text = items[index].room_id.toString()
+            mItemAdditionalNotesTextView.text = "# " + items[index].additionalNotes!!.joinToString(" \n# ")
+           // mItemRoomIdTextView.text = items[index].room_id.toString()
         }
 
 

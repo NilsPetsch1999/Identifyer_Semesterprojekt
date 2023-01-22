@@ -1,22 +1,15 @@
 package com.example.identifyer
 
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.identifyer.ViewModel.InmateViewModel
 
 import com.example.identifyer.ViewModel.RoomViewModel
-import com.example.identifyer.model.Room
-import kotlinx.coroutines.*
+import com.example.identifyer.adapters.RoomAdapter
 
 class RoomActivity : AppCompatActivity(){
 

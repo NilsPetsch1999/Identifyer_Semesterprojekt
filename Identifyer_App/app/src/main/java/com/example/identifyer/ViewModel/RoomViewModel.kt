@@ -97,4 +97,13 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
             }
         }
     }
+
+    suspend fun deleteAllRooms()= withContext(Dispatchers.IO) {
+        try {
+            roomRepository.deleteAll();
+            Log.d("Success", "Deleted all Rooms")
+        }catch (ex : ExecutionException){
+            Log.d("Error", "an error was thrown")
+        }
+    }
 }

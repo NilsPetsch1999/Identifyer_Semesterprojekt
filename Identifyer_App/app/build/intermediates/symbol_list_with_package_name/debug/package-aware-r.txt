@@ -3113,7 +3113,6 @@ id tv_inmate_gender
 id tv_inmate_mental_wellness
 id tv_inmate_nationality
 id tv_inmate_physical_wellness
-id tv_inmate_room_id
 id tv_inmate_security_lvl
 id tv_inmate_sentence
 id tv_inmate_time_of_sentence

@@ -15,10 +15,10 @@
         android:layout_gravity="center"
         android:text="@string/inmate_list"
         android:textSize="22sp"
-        android:padding="8dp"
+        android:padding="6dp"
+        android:fontFamily="@font/oswald_bold"
+        android:textColor="@color/blue"
         />
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -27,11 +27,17 @@
         app:maxButtonHeight="0dp"
         app:titleTextColor="@android:color/white"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:background="@color/light_blue"/>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_inmate_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>
