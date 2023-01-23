@@ -12,7 +12,7 @@ import com.example.identifyer.model.Inmate
 import com.example.identifyer.model.Room
 import com.example.identifyer.model.User
 
-@Database(entities = [User::class, Room::class, Inmate::class], version = 13)
+@Database(entities = [User::class, Room::class, Inmate::class], version = 16)
 @TypeConverters(ListConverter::class)
 abstract class ApplicationDatabase : RoomDatabase() {
     abstract fun userDao() : UserDao

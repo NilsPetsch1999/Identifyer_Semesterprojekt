@@ -9,6 +9,7 @@
         android:targetSdkVersion="32" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -23,7 +24,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Identifyer" >
+        android:theme="@style/Theme.Identifyer"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.identifyer.HelpActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.identifyer.SettingsActivity"
             android:exported="false" />

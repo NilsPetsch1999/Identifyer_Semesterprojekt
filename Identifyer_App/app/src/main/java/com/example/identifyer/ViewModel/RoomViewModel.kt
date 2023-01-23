@@ -65,15 +65,15 @@ class RoomViewModel(application: Application)  : AndroidViewModel(application) {
             newRoom.roomNumber ="no Room Name"
         }
 
-        if(newRoom.inmateList.isNullOrEmpty()){
+        /*if(newRoom.inmateList.isNullOrEmpty()){
             newRoom.inmateList = emptyList()
-        }
-        if(newRoom.securityLevel==0||newRoom.securityLevel==null){
-            newRoom.securityLevel = 99
+        }*/
+        if(newRoom.securityLevel=="0"||newRoom.securityLevel==null){
+            newRoom.securityLevel = "";
         }
 
         val roomName = newRoom.roomNumber
-        val inmateList = newRoom.inmateList
+        //val inmateList = newRoom.inmateList
         val securityLevel = newRoom.securityLevel
 
         if(roomName.isNullOrEmpty()){

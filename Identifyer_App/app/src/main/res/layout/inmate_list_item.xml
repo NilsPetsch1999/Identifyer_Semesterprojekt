@@ -168,34 +168,6 @@
             />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/grey"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingTop= "4dp"
-            android:paddingRight="8sp"
-            android:text="@string/inmate_time_of_sentence_tv"
-            android:fontFamily="@font/oswald_bold"
-            />
-        <TextView
-            android:id="@+id/tv_inmate_time_of_sentence"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingTop= "4dp"
-            android:fontFamily="@font/oswald_regular"
-            />
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -318,7 +290,40 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/grey"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:paddingTop= "4dp"
+                android:paddingBottom="1dp"
+                android:text="Offense List:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:id="@+id/tv_inmate_offense_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:paddingBottom="4dp"
+                android:fontFamily="@font/oswald_regular"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

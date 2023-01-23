@@ -20,6 +20,7 @@ drawable ic_launcher_foreground
 font arsenal_regular
 font oswald_bold
 font oswald_regular
+id action_help
 id action_loadDatabase
 id action_settings
 id btn_inmateList
@@ -38,15 +39,16 @@ id tv_inmate_full_name
 id tv_inmate_gender
 id tv_inmate_mental_wellness
 id tv_inmate_nationality
+id tv_inmate_offense_list
 id tv_inmate_physical_wellness
 id tv_inmate_security_lvl
 id tv_inmate_sentence
-id tv_inmate_time_of_sentence
 id tv_max_capacity
 id tv_room
 id tv_securityLvl
 id tv_title_inmate_list
 id tv_tract
+layout activity_help
 layout activity_inmatelist
 layout activity_main
 layout activity_scanned_room

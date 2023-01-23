@@ -2679,6 +2679,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_help
 id action_image
 id action_loadDatabase
 id action_menu_divider
@@ -3112,10 +3113,10 @@ id tv_inmate_full_name
 id tv_inmate_gender
 id tv_inmate_mental_wellness
 id tv_inmate_nationality
+id tv_inmate_offense_list
 id tv_inmate_physical_wellness
 id tv_inmate_security_lvl
 id tv_inmate_sentence
-id tv_inmate_time_of_sentence
 id tv_max_capacity
 id tv_room
 id tv_securityLvl
@@ -3235,6 +3236,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_help
 layout activity_inmatelist
 layout activity_main
 layout activity_scanned_room

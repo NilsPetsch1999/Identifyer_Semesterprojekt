@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".HelpActivity"
+    android:paddingLeft="8sp"
+    android:paddingRight="8sp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Load Database Help:"
+                android:textSize="20sp"
+                android:fontFamily="@font/oswald_bold"
+                android:paddingTop="10sp"
+                android:paddingBottom="5sp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Load Database:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Synchronizes the database with the Server"
+                android:fontFamily="@font/oswald_bold"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Makes a GET Request to the server. If the gathered data is empty, the current database stays as it is. If the data is not empty the current entries of the database will be deleted and the (new) data will be inserted into the database.    "
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Room Help"
+                android:textSize="20sp"
+                android:fontFamily="@font/oswald_bold"
+                android:paddingTop="10sp"
+                android:paddingBottom="5sp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Room Number:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Number of the Room."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tract:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tract of the Prison where the Room is located. "
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Security Level:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="The rooms degree of risk. 1 = low , 2 = medium, 3= high "
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Max Capacity:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="The Room´s max capacity of inmates."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Inmate List:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="List of Inmates of a specific room with additional Information about the inmates."
+                android:fontFamily="@font/oswald_regular"
+                android:paddingBottom="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Inmates Help "
+                android:textSize="20sp"
+                android:fontFamily="@font/oswald_bold"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Full Name:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Firstname and Lastname of the Inmate."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Gender:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Gender of the inmate. (male, female, other)"
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Date of Birth:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Birthday of the inmate."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Arrival Date:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Date where the inmate arrived at the prison."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Nationality:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Nationality of the Inmate."
+                android:fontFamily="@font/oswald_regular"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Sentence:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Reason why inmate is in prison."
+                android:fontFamily="@font/oswald_regular"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Time of Sentence: "
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Duration of the sentence."
+                android:fontFamily="@font/oswald_regular"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Security Level:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "The inmate´s degree of risk."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Physical Wellness:"
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Information about the physical Wellness of the inmate."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Mental Wellness: "
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Information about the mental Wellness of the inmate."
+                android:fontFamily="@font/oswald_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Combat Experience:"
+                android:fontFamily="@font/oswald_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "The known experience in combat of the inmate. "
+                android:fontFamily="@font/oswald_regular"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Additional Notes: "
+                android:fontFamily="@font/oswald_bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text = "Notes about the inmate."
+                android:fontFamily="@font/oswald_regular"
+                android:paddingBottom="10sp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

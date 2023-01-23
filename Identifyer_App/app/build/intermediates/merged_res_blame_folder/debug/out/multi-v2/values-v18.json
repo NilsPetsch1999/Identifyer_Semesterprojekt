@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Nils Petsch\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "C:\\Users\\Nils_\\Documents\\GitHub\\Identifyer_Semesterprojekt\\Identifyer_App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Nils Petsch\\.gradle\\caches\\transforms-3\\93e1856551d2ec97497f45549ad44355\\transformed\\appcompat-1.4.1\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\Nils_\\.gradle\\caches\\transforms-3\\93e1856551d2ec97497f45549ad44355\\transformed\\appcompat-1.4.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
