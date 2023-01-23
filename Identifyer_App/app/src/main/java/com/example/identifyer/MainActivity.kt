@@ -114,9 +114,9 @@ class MainActivity : AppCompatActivity() {
             var nationality = item.nationality.joinToString(", ")
 
             var securityLevel = when(item.securityLevel){
-                "LEVEL_HIGH"-> "High"
-                "LEVEL_MEDIUM"-> "Medium"
-                "LEVEL_LOW"-> "Low"
+                "LEVEL_HIGH"-> "HIGH"
+                "LEVEL_MEDIUM"-> "MEDIUM"
+                "LEVEL_LOW"-> "LOW"
                 else-> {
                     "NONE"
                 }
@@ -218,12 +218,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val itemId: Int = item.itemId
 
-        if(itemId == R.id.action_settings){
-            //What to do when clicking on settings
-            val intent = Intent(this, SettingsActivity::class.java)
-            startActivity(intent)
-            return true
-        }else if(itemId == R.id.action_loadDatabase){
+        if(itemId == R.id.action_loadDatabase){
             //sync Database
             syncDatabase()
             return true
@@ -236,19 +231,19 @@ class MainActivity : AppCompatActivity() {
     //method which calls the http request method --> gets response as String which-->validate if empty --> delete all entries if not empty--> parses response and inserts the data
     private fun syncDatabase(){
            var response = requestData(url)
+        
         lifecycleScope.launch {
             if(!response.isNullOrBlank()){
                 deleteAllRoomsInmates()
                 delay(1000)
                 try {
                     parseJson(response)
-                    delay(1000)
                     Toast.makeText(applicationContext,"Database updated successfully!", Toast.LENGTH_SHORT).show()
                 }catch (e:Exception){
                     Toast.makeText(applicationContext,"Database update failed!", Toast.LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(applicationContext,"No Data found!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"No Data found! This function needs access to the Internet", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -302,5 +297,6 @@ class MainActivity : AppCompatActivity() {
         val format = SimpleDateFormat("yyyy.MM.dd")
         return format.format(date)
     }
+
 
 }

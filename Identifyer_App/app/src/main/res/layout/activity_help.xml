@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Load Database Help:"
+                android:text="@string/load_database_help"
                 android:textSize="20sp"
                 android:fontFamily="@font/oswald_bold"
                 android:paddingTop="10sp"
@@ -35,14 +35,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Load Database:"
+                android:text="@string/load_database_hlep_title"
                 android:fontFamily="@font/oswald_bold"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Synchronizes the database with the Server"
+                android:text="@string/synchronizes_the_database_with_the_server"
                 android:fontFamily="@font/oswald_bold"
                 android:textSize="12sp"
                 />
@@ -50,14 +50,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Makes a GET Request to the server. If the gathered data is empty, the current database stays as it is. If the data is not empty the current entries of the database will be deleted and the (new) data will be inserted into the database.    "
+                android:text="@string/info_load_database_help_page"
                 android:fontFamily="@font/oswald_regular"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Room Help"
+                android:text="@string/room_help_page"
                 android:textSize="20sp"
                 android:fontFamily="@font/oswald_bold"
                 android:paddingTop="10sp"
@@ -71,46 +71,46 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Room Number:"
+                android:text="@string/room_number_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Number of the Room."
+                android:text="@string/number_of_the_room_help_page"
                 android:fontFamily="@font/oswald_regular"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Tract:"
+                android:text="@string/tract_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Tract of the Prison where the Room is located. "
+                android:text="@string/tract_of_the_prison__help_page"
                 android:fontFamily="@font/oswald_regular"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Security Level:"
+                android:text="@string/security_level_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="The rooms degree of risk. 1 = low , 2 = medium, 3= high "
+                android:text="The rooms degree of risk. (LOW, MEDIUM, HIGH) "
                 android:fontFamily="@font/oswald_regular"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Max Capacity:"
+                android:text="@string/max_capacity_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -124,7 +124,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Inmate List:"
+                android:text="@string/inmate_list_help_page_room"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -139,7 +139,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Inmates Help "
+                android:text="@string/inmates_help_help_page"
                 android:textSize="20sp"
                 android:fontFamily="@font/oswald_bold"
                 android:paddingTop="5sp"
@@ -152,7 +152,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Full Name:"
+                android:text = "@string/full_name_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
@@ -166,7 +166,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Gender:"
+                android:text = "@string/gender_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -180,7 +180,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Date of Birth:"
+                android:text = "@string/date_of_birth_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -194,7 +194,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Arrival Date:"
+                android:text = "@string/arrival_date_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -208,52 +208,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Nationality:"
+                android:text = "@string/nationality_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Nationality of the Inmate."
+                android:text = "Nationalities of the Inmate."
                 android:fontFamily="@font/oswald_regular"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Sentence:"
+                android:text = "@string/sentence_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text = "Reason why inmate is in prison."
-                android:fontFamily="@font/oswald_regular"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text = "Time of Sentence: "
-                android:fontFamily="@font/oswald_bold"
-                />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text = "Duration of the sentence."
                 android:fontFamily="@font/oswald_regular"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Security Level:"
+                android:text = "@string/security_level_help_page_inmate"
                 android:fontFamily="@font/oswald_bold"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "The inmate´s degree of risk."
+                android:text = "The inmate´s degree of risk. (LOW, MEDIUM, HIGH)"
                 android:fontFamily="@font/oswald_regular"
                 />
 
@@ -261,7 +249,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Physical Wellness:"
+                android:text = "@string/physical_wellness_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
@@ -274,7 +262,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Mental Wellness: "
+                android:text = "@string/mental_wellness_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -288,7 +276,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Combat Experience:"
+                android:text = "@string/combat_experience_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
 
@@ -303,7 +291,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text = "Additional Notes: "
+                android:text = "@string/additional_notes_help_page"
                 android:fontFamily="@font/oswald_bold"
                 />
             <TextView
